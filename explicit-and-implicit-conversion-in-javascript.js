@@ -19,7 +19,7 @@ Use console.log() to clearly show the before-and-after type conversions.
 */
 
 
-let result = "5" - 2;
+let result = Number("5") - 2; // making "5" a number allows a number to be subtracted by a number
 console.log("The result is: " + result);
 
 let isValid = Boolean("false");
@@ -27,6 +27,21 @@ if (isValid) {
     console.log("This is valid!");
 }
 
-let age = "25";
+let age = Number("25"); //making "5" a number allows a number to be subtracted by a number
 let totalAge = age + 5;
 console.log("Total Age: " + totalAge);
+
+
+//Examples as below:
+
+//implicit 
+
+let implicitValueExample = Number(null) + 5; // null is implicitly converted to 0
+let totalImplicitValueExample = implicitValueExample + 19
+console.log("The total value is:", (totalImplicitValueExample)); 
+
+
+//explicit example:
+let anExplicitExample = true; // this is currently a boolean 
+let convertedString = String(anExplicitExample); // Explicitly converting a boolean to a string
+console.log("Before Conversion:", typeof(anExplicitExample), "After Conversion:", typeof convertedString); // 
